@@ -1,3 +1,5 @@
+import os
+
 from moviepy.editor import VideoFileClip, TextClip, CompositeVideoClip
 
 
@@ -53,3 +55,14 @@ def segmentador_video(nome_video_original, start_time, end_time, legenda):
     subclip.close()
     subtitle.close()
     final_clip.close()
+
+
+depoimentos = [
+['00:00', '03:55', 'Descontrole de Dayse, segundo amigos e Lucas'],
+['04:20', '05:05', 'Sobre temperamento de Dayse']
+]
+#
+# for depoimento in depoimentos:
+#     segmentador_video('dayse_aud-Negativa de versão.mp4', depoimento[0], depoimento[1], depoimento[2])
+
+segmentador_video('benito-test-acusacao-Sobre Dayse ter ligado para ele e exigido foto.mp4', '00:00', '01:19', 'Sobre exigência de foto quando estava com o pai')
